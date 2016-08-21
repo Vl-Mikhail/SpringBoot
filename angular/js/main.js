@@ -33,7 +33,7 @@ app.factory('filmService', function(){
                 },
                 {
                     "id": "1",
-                    "name" : "29"
+                    "name" : "Mike"
                 },
                 {
                     "id": "1",
@@ -41,11 +41,11 @@ app.factory('filmService', function(){
                 },
                 {
                     "id": "1",
-                    "name" : "29"
+                    "name" : "Lol"
                 },
                 {
                     "id": "1",
-                    "name" : "29"
+                    "name" : "Pop"
                 }
             ];
         }
