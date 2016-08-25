@@ -1,23 +1,23 @@
 package ru.misha.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.misha.model.StackSite;
+import ru.misha.persistence.StackSiteRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class StackService {
 
-    private static List<StackSite> items = new ArrayList<>();
-    static {
-        items.add(new StackSite("1","jp", "Title JP", "Description new JP"));
-        items.add(new StackSite("1","RUS", "Title RUS", "Description new RUS"));
-        items.add(new StackSite("1","ukr", "Title ukr", "Description new ukr"));
-        items.add(new StackSite("1","usa", "Title usa", "Description new usa"));
+    @Autowired
+    private StackSiteRepository repository;
+
+    public void save(List<StackSite> list){
+        repository.save(list);
     }
 
     public List<StackSite> findAll() {
-        return items;
+        return repository.findAll();
     }
 }
