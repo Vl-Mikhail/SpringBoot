@@ -1,18 +1,26 @@
 package ru.misha.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 //Определяет что модель используем в монго
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 @Document
 public class StackSite {
 
     @Id
-    private final String id;
+    private String id;
+    private String site;
+    private String title;
+    private String description;
 
-    private final String site;
-    private final String title;
-    private final String description;
+    public StackSite() {
+    }
 
     public StackSite(String id, String site, String title, String description) {
         this.id = id;
@@ -35,5 +43,21 @@ public class StackSite {
 
     public String getDescription() {
         return description;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

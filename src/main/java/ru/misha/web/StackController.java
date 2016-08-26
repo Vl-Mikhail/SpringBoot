@@ -13,7 +13,7 @@ import java.util.List;
 //Позволяет возращать json
 @RestController
 @RequestMapping("/api/stack")
-public class Stack {
+public class StackController {
 
     @Autowired
     private StackService stackService;
@@ -30,8 +30,6 @@ public class Stack {
     @CrossOrigin
     @RequestMapping
     public List<StackSite> getListSite(){
-        items.isEmpty();
-        stackService.save(items);
         return stackService.findAll();
     }
 
