@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.misha.model.SiteDto;
 import ru.misha.model.StackSite;
 import ru.misha.service.StackService;
 
@@ -29,7 +30,7 @@ public class StackController {
 
     @CrossOrigin
     @RequestMapping
-    public List<StackSite> getListSite(){
+    public List<SiteDto> getListSite(){
         return stackService.findAll();
     }
 
